@@ -14,7 +14,7 @@ export default function Layout({
   navbar: ReactNode;
   content: ReactNode;
 }) {
-  const { isDesktop, windowWidth } = useIsDesktop();
+  const { isDesktop } = useIsDesktop();
   const pathname = usePathname();
 
   const pathToShowContent = ['content'];
@@ -41,20 +41,13 @@ export default function Layout({
         ) : (
           <div className="relative flex h-full w-full">
             {showViewer ? (
-              <div
-                className={cn('absolute inset-0 h-full w-full transform-gpu')}
-                style={{ width: windowWidth, willChange: 'opacity' }}
-              >
-                {content}
-              </div>
+              <div className={cn('absolute inset-0 h-full w-full transform-gpu')}>{content}</div>
             ) : (
-              <div
-                className={cn('absolute inset-0 h-full w-full transform-gpu')}
-                style={{ width: windowWidth, willChange: 'opacity' }}
-              >
-                {navbar}
-              </div>
+              <div className={cn('absolute inset-0 h-full w-full transform-gpu')}>{navbar}</div>
             )}
+            <div className="absolute inset-x-0 bottom-0 flex w-full lg:hidden">
+              <Navbar />
+            </div>
           </div>
         )}
       </div>

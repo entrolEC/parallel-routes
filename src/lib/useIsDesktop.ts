@@ -14,7 +14,6 @@ export function useIsDesktop() {
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= DESKTOP_SIZE);
       setWindowWidth(window.innerWidth);
-      console.log('windowWidth', window.innerWidth);
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);

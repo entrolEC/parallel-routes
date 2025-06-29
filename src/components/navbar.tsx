@@ -1,18 +1,13 @@
 'use client';
 
-import { usePathname, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 export default function Navbar({ className }: { className?: string }) {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const currentParams = Object.fromEntries(searchParams.entries());
-
   return (
     <div
       className={cn(
-        'border-secondary-700 bg-secondary-800 pb-safe-offset-3 sticky bottom-0 left-0 flex justify-around overflow-hidden border-t pt-3 lg:flex-col lg:justify-start lg:gap-10.5 lg:px-[5px]',
+        'border-secondary-700 sticky bottom-0 left-0 flex w-full items-center justify-around overflow-hidden bg-pink-100 py-3 lg:flex-col lg:justify-start lg:gap-10.5 lg:px-[5px]',
         className
       )}
     >

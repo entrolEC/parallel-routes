@@ -7,7 +7,7 @@ export default function Navbar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        'border-secondary-700 sticky bottom-0 left-0 flex w-full items-center justify-around overflow-hidden bg-pink-100 py-3 lg:flex-col lg:justify-start lg:gap-10.5 lg:px-[5px]',
+        'border-secondary-700 sticky bottom-0 left-0 flex w-full items-center justify-around overflow-hidden bg-indigo-100 py-3 lg:flex-col lg:justify-start lg:gap-10.5 lg:px-[5px]',
         className
       )}
     >

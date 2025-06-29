@@ -12,7 +12,7 @@ export default function DefaultNavbar() {
 
   return (
     <div className="flex h-dvh flex-col justify-end lg:flex-row-reverse">
-      <div className="lg:max-w-screen-xs mx-auto h-[calc(100dvh-calc(env(safe-area-inset-bottom)+4.75rem))] w-screen max-w-screen-xl flex-shrink-0 overflow-hidden xl:h-dvh">
+      <div className="mx-auto h-full w-screen max-w-screen-lg flex-shrink-0 overflow-hidden lg:h-dvh lg:max-w-lg">
         <p>loading</p>
       </div>
       <div className="block lg:hidden">
